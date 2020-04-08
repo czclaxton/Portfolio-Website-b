@@ -27,37 +27,37 @@ function LandingPageHeader() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/bg6.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/bg2.jpg") + ")",
           }}
           ref={pageHeader}
         ></div>
         <div className="content-center">
           <Container>
-            <h1 className="title">This is our great company.</h1>
+            <h1 className="title">Hello, I'm Connor Claxton.</h1>
             <div className="text-center">
               <Button
-                className="btn-icon btn-round"
+                className="btn-icon"
                 color="info"
                 href="#pablo"
-                onClick={e => e.preventDefault()}
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-facebook-square"></i>
+                <i className="fab fa-linkedin"></i>
               </Button>
               <Button
-                className="btn-icon btn-round"
+                className="btn-icon"
                 color="info"
                 href="#pablo"
-                onClick={e => e.preventDefault()}
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-twitter"></i>
+                <i className="fab fa-github"></i>
               </Button>
               <Button
-                className="btn-icon btn-round"
+                className="btn-icon"
                 color="info"
                 href="#pablo"
-                onClick={e => e.preventDefault()}
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fab fa-google-plus"></i>
+                <i className="fab fa fa-arrow-circle-down"></i>
               </Button>
             </div>
           </Container>
