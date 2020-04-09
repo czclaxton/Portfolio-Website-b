@@ -63,8 +63,13 @@ function LandingPageHeader() {
               <Button
                 className="btn-icon"
                 color="info"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    "https://drive.google.com/uc?export=download&id=1rqoT8BydMdC78XfOn7WaMiW1qsG5TW2L",
+                    "_blank"
+                  );
+                }}
               >
                 <i className="fab fa fa-arrow-circle-down"></i>
               </Button>
