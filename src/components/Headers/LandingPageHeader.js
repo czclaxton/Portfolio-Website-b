@@ -38,24 +38,37 @@ function LandingPageHeader() {
               <Button
                 className="btn-icon"
                 color="info"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
+                target="_blank"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    "https://www.linkedin.com/in/czclaxton/",
+                    "_blank"
+                  );
+                }}
               >
                 <i className="fab fa-linkedin"></i>
               </Button>
+
               <Button
                 className="btn-icon"
                 color="info"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://github.com/czclaxton", "_blank");
+                }}
               >
                 <i className="fab fa-github"></i>
               </Button>
               <Button
                 className="btn-icon"
                 color="info"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    "https://drive.google.com/uc?export=download&id=1rqoT8BydMdC78XfOn7WaMiW1qsG5TW2L"
+                  );
+                }}
               >
                 <i className="fab fa fa-arrow-circle-down"></i>
               </Button>
