@@ -53,8 +53,10 @@ function LandingPageHeader() {
               <Button
                 className="btn-icon"
                 color="info"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open("https://github.com/czclaxton", "_blank");
+                }}
               >
                 <i className="fab fa-github"></i>
               </Button>
