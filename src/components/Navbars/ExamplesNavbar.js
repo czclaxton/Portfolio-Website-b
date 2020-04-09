@@ -13,7 +13,7 @@ import {
   NavLink,
   Nav,
   Container,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 
 function ExamplesNavbar() {
@@ -58,23 +58,23 @@ function ExamplesNavbar() {
               href="#pablo"
               id="navbarDropdown"
               tag="a"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               <span className="button-bar"></span>
               <span className="button-bar"></span>
               <span className="button-bar"></span>
             </DropdownToggle>
             <DropdownMenu aria-labelledby="navbarDropdown">
-              <DropdownItem header tag="a">
-                Dropdown header
+              {/* <DropdownItem header tag="p">
+                Menu
+              </DropdownItem> */}
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Home
               </DropdownItem>
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-                Action
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Projects
               </DropdownItem>
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-                Another action
-              </DropdownItem>
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
+              {/* <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
                 Something else here
               </DropdownItem>
               <DropdownItem divider></DropdownItem>
@@ -84,20 +84,10 @@ function ExamplesNavbar() {
               <DropdownItem divider></DropdownItem>
               <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
                 One more separated link
-              </DropdownItem>
+              </DropdownItem> */}
             </DropdownMenu>
           </UncontrolledDropdown>
           <div className="navbar-translate">
-            <NavbarBrand
-              href="https://demos.creative-tim.com/now-ui-kit-react/index?ref=nukr-examples-navbar"
-              target="_blank"
-              id="navbar-brand"
-            >
-              Now Ui Kit
-            </NavbarBrand>
-            <UncontrolledTooltip target="#navbar-brand">
-              Designed by Invision. Coded by Creative Tim
-            </UncontrolledTooltip>
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
@@ -120,12 +110,12 @@ function ExamplesNavbar() {
             <Nav navbar>
               <NavItem>
                 <NavLink to="/index" tag={Link}>
-                  Back to Kit
+                  Projects
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/creativetimofficial/now-ui-kit-react/issues?ref=creativetim">
-                  Have an issue?
+                  Resume
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -134,12 +124,12 @@ function ExamplesNavbar() {
                   target="_blank"
                   id="twitter-tooltip"
                 >
-                  <i className="fab fa-twitter"></i>
-                  <p className="d-lg-none d-xl-none">Twitter</p>
+                  <i className="fab fa-linkedin"></i>
+                  <p className="d-lg-none d-xl-none">LinkedIn</p>
                 </NavLink>
-                <UncontrolledTooltip target="#twitter-tooltip">
-                  Follow us on Twitter
-                </UncontrolledTooltip>
+                {/* <UncontrolledTooltip target="#linkedIn-tooltip">
+                  Connect with me on LinkedIn
+                </UncontrolledTooltip> */}
               </NavItem>
               <NavItem>
                 <NavLink
@@ -147,25 +137,12 @@ function ExamplesNavbar() {
                   target="_blank"
                   id="facebook-tooltip"
                 >
-                  <i className="fab fa-facebook-square"></i>
-                  <p className="d-lg-none d-xl-none">Facebook</p>
+                  <i className="fab fa-github"></i>
+                  <p className="d-lg-none d-xl-none">Github</p>
                 </NavLink>
-                <UncontrolledTooltip target="#facebook-tooltip">
-                  Like us on Facebook
-                </UncontrolledTooltip>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-                  target="_blank"
-                  id="instagram-tooltip"
-                >
-                  <i className="fab fa-instagram"></i>
-                  <p className="d-lg-none d-xl-none">Instagram</p>
-                </NavLink>
-                <UncontrolledTooltip target="#instagram-tooltip">
-                  Follow us on Instagram
-                </UncontrolledTooltip>
+                {/* <UncontrolledTooltip target="#github-tooltip">
+                  Check out my Github page
+                </UncontrolledTooltip> */}
               </NavItem>
             </Nav>
           </Collapse>
