@@ -66,8 +66,7 @@ function LandingPageHeader() {
                 onClick={(e) => {
                   e.preventDefault();
                   window.open(
-                    "https://drive.google.com/uc?export=download&id=1rqoT8BydMdC78XfOn7WaMiW1qsG5TW2L",
-                    "_blank"
+                    "https://drive.google.com/uc?export=download&id=1rqoT8BydMdC78XfOn7WaMiW1qsG5TW2L"
                   );
                 }}
               >

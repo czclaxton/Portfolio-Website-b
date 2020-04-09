@@ -35,7 +35,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Switch>
-        <Route path="/" render={(props) => <LandingPage {...props} />} />
+        <Route exact path="/" render={(props) => <LandingPage {...props} />} />
         <Route
           path="/profile-page"
           render={(props) => <ProfilePage {...props} />}

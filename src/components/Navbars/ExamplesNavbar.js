@@ -95,26 +95,21 @@ function ExamplesNavbar() {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink href="https://github.com/creativetimofficial/now-ui-kit-react/issues?ref=creativetim">
+                <NavLink href="https://drive.google.com/uc?export=download&id=1rqoT8BydMdC78XfOn7WaMiW1qsG5TW2L">
                   Resume
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://twitter.com/CreativeTim?ref=creativetim"
+                  href="https://www.linkedin.com/in/czclaxton/"
                   target="_blank"
-                  id="twitter-tooltip"
                 >
                   <i className="fab fa-linkedin"></i>
                   <p className="d-lg-none d-xl-none">LinkedIn</p>
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink
-                  href="https://www.facebook.com/CreativeTim?ref=creativetim"
-                  target="_blank"
-                  id="facebook-tooltip"
-                >
+                <NavLink href="https://github.com/czclaxton" target="_blank">
                   <i className="fab fa-github"></i>
                   <p className="d-lg-none d-xl-none">Github</p>
                 </NavLink>
