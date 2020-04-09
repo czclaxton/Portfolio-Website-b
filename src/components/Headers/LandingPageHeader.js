@@ -38,11 +38,18 @@ function LandingPageHeader() {
               <Button
                 className="btn-icon"
                 color="info"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
+                target="_blank"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    "https://www.linkedin.com/in/czclaxton/",
+                    "_blank"
+                  );
+                }}
               >
                 <i className="fab fa-linkedin"></i>
               </Button>
+
               <Button
                 className="btn-icon"
                 color="info"
