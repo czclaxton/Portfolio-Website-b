@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import { Button, Container } from "reactstrap";
@@ -73,6 +74,11 @@ function LandingPageHeader() {
                 <i className="fab fa fa-arrow-circle-down"></i>
               </Button>
             </div>
+            <Link to="/profile-page">
+              <Button color="info">
+                <h3 style={{ margin: 0 }}>View Projects</h3>
+              </Button>
+            </Link>
           </Container>
         </div>
       </div>

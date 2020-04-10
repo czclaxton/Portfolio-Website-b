@@ -2,7 +2,6 @@ import React from "react";
 
 // reactstrap components
 import {
-  Button,
   NavItem,
   NavLink,
   Nav,
@@ -11,16 +10,15 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip,
 } from "reactstrap";
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
+import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 
 function ProfilePage() {
-  const [pills, setPills] = React.useState("2");
+  const [pills, setPills] = React.useState("1");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
     document.body.classList.add("sidebar-collapse");
@@ -34,17 +32,17 @@ function ProfilePage() {
     <>
       <ExamplesNavbar />
       <div className="wrapper">
-        <ProfilePageHeader />
+        {/* <ProfilePageHeader /> */}
         <div className="section">
           <Container>
-            <h3 className="title">Summary</h3>
+            {/* <h3 className="title">Summary</h3>
             <h5 className="description">
               Learn Locker is a platform for developers to share and store their
               favorite articles, videos, books, and other learning materials.
-            </h5>
+            </h5> */}
             <Row>
               <Col className="ml-auto mr-auto" md="6">
-                <h4 className="title text-center">Other Projects</h4>
+                <h2 className="title text-center">Projects</h2>
                 <div className="nav-align-center">
                   <Nav
                     className="nav-pills-info nav-pills-just-icons"
@@ -54,37 +52,55 @@ function ProfilePage() {
                     <NavItem>
                       <NavLink
                         className={pills === "1" ? "active" : ""}
-                        href="#pablo"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontSize: "1.75rem",
+                          cursor: "pointer",
+                        }}
                         onClick={(e) => {
                           e.preventDefault();
                           setPills("1");
                         }}
                       >
-                        <i className="now-ui-icons design_image"></i>
+                        1
                       </NavLink>
                     </NavItem>
                     <NavItem>
                       <NavLink
                         className={pills === "2" ? "active" : ""}
-                        href="#pablo"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontSize: "1.75rem",
+                          cursor: "pointer",
+                        }}
                         onClick={(e) => {
                           e.preventDefault();
                           setPills("2");
                         }}
                       >
-                        <i className="now-ui-icons location_world"></i>
+                        2
                       </NavLink>
                     </NavItem>
                     <NavItem>
                       <NavLink
                         className={pills === "3" ? "active" : ""}
-                        href="#pablo"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontSize: "1.75rem",
+                          cursor: "pointer",
+                        }}
                         onClick={(e) => {
                           e.preventDefault();
                           setPills("3");
                         }}
                       >
-                        <i className="now-ui-icons sport_user-run"></i>
+                        3
                       </NavLink>
                     </NavItem>
                   </Nav>
@@ -185,7 +201,6 @@ function ProfilePage() {
             </Row>
           </Container>
         </div>
-        <DefaultFooter />
       </div>
     </>
   );
