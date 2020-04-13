@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { matchPath } from "react-router";
+import { withRouter } from "react-router";
 // reactstrap components
 import {
   Collapse,
@@ -7,19 +8,27 @@ import {
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
-  NavbarBrand,
   Navbar,
   NavItem,
   NavLink,
   Nav,
   Container,
-  UncontrolledTooltip,
 } from "reactstrap";
 
-function ExamplesNavbar() {
+function ExamplesNavbar(props) {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+
+  const match = matchPath("/profile-page", {
+    path: props.location.pathname,
+    exact: true,
+    strict: false,
+  });
+
   React.useEffect(() => {
+    if (match && document.documentElement.scrollTop >= 0) {
+      setNavbarColor("");
+    }
     const updateNavbarColor = () => {
       if (
         document.documentElement.scrollTop > 399 ||
@@ -95,6 +104,11 @@ function ExamplesNavbar() {
           >
             <Nav navbar>
               <NavItem>
+                <NavLink href="http://localhost:3000/profile-page">
+                  Projects
+                </NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink href="https://drive.google.com/uc?export=download&id=1rqoT8BydMdC78XfOn7WaMiW1qsG5TW2L">
                   Resume
                 </NavLink>
@@ -122,4 +136,4 @@ function ExamplesNavbar() {
   );
 }
 
-export default ExamplesNavbar;
+export default withRouter(ExamplesNavbar);

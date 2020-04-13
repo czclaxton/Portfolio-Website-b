@@ -25,19 +25,19 @@ function ProfilePageHeader() {
     <>
       <div
         className="page-header clear-filter page-header-small"
-        filter-color="blue"
+        // filter-color="blue"
       >
         <div
           className="page-header-image"
           style={{
             backgroundImage:
-              "url(" + require("assets/img/projects/learnlocker/1.png") + ")",
+              "url(" + require("assets/img/profileHeader.jpg") + ")",
           }}
           ref={pageHeader}
         ></div>
         <Container>
-          <h3 className="title">Learn Locker</h3>
-          <p className="category">Full Stack React/Node Project</p>
+          {/* <h1 className="title">My Work</h1> */}
+          {/* <p className="category">Check out my latest projects</p> */}
         </Container>
       </div>
     </>
