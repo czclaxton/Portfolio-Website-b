@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 // reactstrap components
 import { Button, Container } from "reactstrap";
 
-// core components
-
 function LandingPageHeader() {
   let pageHeader = React.createRef();
 
