@@ -23,10 +23,7 @@ function ProfilePageHeader() {
   });
   return (
     <>
-      <div
-        className="page-header clear-filter page-header-small"
-        // filter-color="blue"
-      >
+      <div className="page-header clear-filter page-header-small">
         <div
           className="page-header-image"
           style={{
@@ -35,10 +32,7 @@ function ProfilePageHeader() {
           }}
           ref={pageHeader}
         ></div>
-        <Container>
-          {/* <h1 className="title">My Work</h1> */}
-          {/* <p className="category">Check out my latest projects</p> */}
-        </Container>
+        <Container></Container>
       </div>
     </>
   );
