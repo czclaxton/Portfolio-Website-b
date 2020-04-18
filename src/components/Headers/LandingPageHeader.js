@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 // reactstrap components
 import { Button, Container } from "reactstrap";
 
 function LandingPageHeader() {
   let pageHeader = React.createRef();
+  let Scroll = require("react-scroll");
+  let scroller = Scroll.scroller;
 
   React.useEffect(() => {
     if (window.innerWidth > 991) {
@@ -20,6 +22,7 @@ function LandingPageHeader() {
       };
     }
   });
+
   return (
     <>
       <div className="page-header page-header-small">
@@ -72,11 +75,21 @@ function LandingPageHeader() {
                 <i className="fab fa fa-arrow-circle-down"></i>
               </Button>
             </div>
-            <Link to="/profile-page">
-              <Button color="info">
-                <h3 style={{ margin: 0 }}>View Projects</h3>
-              </Button>
-            </Link>
+            {/* <Link to="/profile-page"> */}
+            <Button
+              color="info"
+              to="scrollToProjects"
+              onClick={() =>
+                scroller.scrollTo("scrollToProjects", {
+                  duration: 3000,
+                  delay: 0,
+                  smooth: "easeInOutQuart",
+                })
+              }
+            >
+              <h3 style={{ margin: 0 }}>View Projects</h3>
+            </Button>
+            {/* </Link> */}
           </Container>
         </div>
       </div>

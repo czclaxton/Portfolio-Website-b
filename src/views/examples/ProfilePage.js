@@ -14,8 +14,6 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import DefaultFooter from "components/Footers/DefaultFooter.js";
-import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
 
 function ProfilePage() {
   const [pills, setPills] = React.useState("1");
@@ -34,14 +32,9 @@ function ProfilePage() {
       <div className="wrapper">
         {/* <ProfilePageHeader /> */}
         <div className="section">
-          <Container>
-            {/* <h3 className="title">Summary</h3>
-            <h5 className="description">
-              Learn Locker is a platform for developers to share and store their
-              favorite articles, videos, books, and other learning materials.
-            </h5> */}
+          <Container containerId="containerElement">
             <Row>
-              <Col className="ml-auto mr-auto" md="6">
+              <Col className="ml-auto mr-auto" md="6" name="scrollToProjects">
                 <h2 className="title text-center">Projects</h2>
                 <div className="nav-align-center">
                   <Nav

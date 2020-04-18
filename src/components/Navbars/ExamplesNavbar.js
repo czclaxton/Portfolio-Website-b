@@ -19,6 +19,9 @@ function ExamplesNavbar(props) {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
 
+  let Scroll = require("react-scroll");
+  let scroller = Scroll.scroller;
+
   const match = matchPath("/profile-page", {
     path: props.location.pathname,
     exact: true,
@@ -104,7 +107,15 @@ function ExamplesNavbar(props) {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink href="http://localhost:3000/profile-page">
+                <NavLink
+                  onClick={() =>
+                    scroller.scrollTo("scrollToProjects", {
+                      duration: 3000,
+                      delay: 0,
+                      smooth: "easeInOutQuart",
+                    })
+                  }
+                >
                   Projects
                 </NavLink>
               </NavItem>
