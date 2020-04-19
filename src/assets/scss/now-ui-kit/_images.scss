@@ -1,7 +1,29 @@
-img{
-    max-width: 100%;
-    border-radius: 1px;
+img {
+  max-width: 100%;
+  border-radius: 1px;
 }
-.img-raised{
-    box-shadow: $box-shadow-raised;
+.img-raised {
+  box-shadow: $box-shadow-raised;
+  transition: 0.3s;
+  &:hover {
+    box-shadow: $box-shadow-raised-hover;
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+}
+.projectWrapper {
+  transition: 0.3s;
+  &:hover {
+    transform: translate(0px, -10px);
+    transition: 0.3s;
+  }
+}
+.projectTitle {
+  background-color: black;
+  color: white;
+  position: relative;
+  vertical-align: bottom;
+  z-index: 1;
+  text-align: center;
+  margin: 0;
 }

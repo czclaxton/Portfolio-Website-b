@@ -108,6 +108,7 @@ function ExamplesNavbar(props) {
             <Nav navbar>
               <NavItem>
                 <NavLink
+                  href="#"
                   onClick={() =>
                     scroller.scrollTo("scrollToProjects", {
                       duration: 3000,

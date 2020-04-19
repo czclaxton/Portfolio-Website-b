@@ -27,17 +27,17 @@ import "assets/demo/nucleo-icons-page-styles.css";
 
 // pages
 import LandingPage from "views/examples/LandingPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
+// import Projects from "views/examples/Projects.js";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Switch>
         <Route exact path="/" render={(props) => <LandingPage {...props} />} />
-        <Route
+        {/* <Route
           path="/profile-page"
-          render={(props) => <ProfilePage {...props} />}
-        />
+          render={(props) => <Projects {...props} />}
+        /> */}
       </Switch>
     </Switch>
   </BrowserRouter>,

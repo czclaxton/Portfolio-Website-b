@@ -1,7 +1,7 @@
 import React from "react";
 
 // Components
-import ProfilePage from "./ProfilePage";
+import Projects from "./Projects";
 
 // reactstrap components
 import {
@@ -110,7 +110,7 @@ function LandingPage() {
             </div>
           </Container>
         </div>
-        <ProfilePage />
+        <Projects />
         <div className="section section-contact-us text-center">
           <Container>
             <h2 className="title">Want to work with me?</h2>

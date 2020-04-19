@@ -1,5 +1,8 @@
 import React from "react";
 
+// Components
+import ProjectCarousel from "components/ProjectCarousel/ProjectCarousel";
+
 // reactstrap components
 import {
   NavItem,
@@ -15,7 +18,7 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 
-function ProfilePage() {
+function Projects() {
   const [pills, setPills] = React.useState("1");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -26,11 +29,12 @@ function ProfilePage() {
       document.body.classList.remove("sidebar-collapse");
     };
   });
+
   return (
     <>
       <ExamplesNavbar />
       <div className="wrapper">
-        {/* <ProfilePageHeader /> */}
+        {/* <ProjectsHeader /> */}
         <div className="section">
           <Container containerId="containerElement">
             <Row>
@@ -104,27 +108,32 @@ function ProfilePage() {
                   <Col className="ml-auto mr-auto" md="10">
                     <Row className="collections">
                       <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg1.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg3.jpg")}
-                        ></img>
+                        <div className="projectWrapper">
+                          <img
+                            alt="..."
+                            className="img-raised"
+                            src={require("assets/img/projects/learnlocker/2.png")}
+                          ></img>
+                          <h3 className="projectTitle">Learn Locker</h3>
+                        </div>
+                        <div className="projectWrapper">
+                          <img
+                            alt="..."
+                            className="img-raised"
+                            src={require("assets/img/projects/learnlocker/1.png")}
+                          ></img>
+                        </div>
                       </Col>
                       <Col md="6">
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg8.jpg")}
+                          src={require("assets/img/projects/socialbee/1.png")}
                         ></img>
                         <img
                           alt="..."
                           className="img-raised"
-                          src={require("assets/img/bg7.jpg")}
+                          src={require("assets/img/projects/learnlocker/3.png")}
                         ></img>
                       </Col>
                     </Row>
@@ -199,4 +208,4 @@ function ProfilePage() {
   );
 }
 
-export default ProfilePage;
+export default Projects;
