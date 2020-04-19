@@ -1,8 +1,5 @@
 import React from "react";
 
-// Components
-import ProjectCarousel from "components/ProjectCarousel/ProjectCarousel";
-
 // reactstrap components
 import {
   NavItem,
@@ -13,6 +10,7 @@ import {
   Container,
   Row,
   Col,
+  Button,
 } from "reactstrap";
 
 // core components
@@ -114,6 +112,13 @@ function Projects() {
                             className="img-raised"
                             src={require("assets/img/projects/learnlocker/2.png")}
                           ></img>
+                          <Button
+                            size="lg"
+                            color="info"
+                            className="projectButton"
+                          >
+                            Learn More
+                          </Button>
                           <h3 className="projectTitle">Learn Locker</h3>
                         </div>
                         <div className="projectWrapper">
@@ -122,19 +127,47 @@ function Projects() {
                             className="img-raised"
                             src={require("assets/img/projects/learnlocker/1.png")}
                           ></img>
+                          <Button
+                            size="lg"
+                            color="info"
+                            className="projectButton"
+                          >
+                            Learn More
+                          </Button>
+                          <h3 className="projectTitle">Placeholder</h3>
                         </div>
                       </Col>
                       <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/projects/socialbee/1.png")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/projects/learnlocker/3.png")}
-                        ></img>
+                        <div className="projectWrapper">
+                          <img
+                            alt="..."
+                            className="img-raised"
+                            src={require("assets/img/projects/socialbee/1.png")}
+                          ></img>
+                          <Button
+                            size="lg"
+                            color="info"
+                            className="projectButton"
+                          >
+                            Learn More
+                          </Button>
+                          <h3 className="projectTitle">SocialBee</h3>
+                        </div>
+                        <div className="projectWrapper">
+                          <img
+                            alt="..."
+                            className="img-raised"
+                            src={require("assets/img/projects/learnlocker/3.png")}
+                          ></img>
+                          <Button
+                            size="lg"
+                            color="info"
+                            className="projectButton"
+                          >
+                            Learn More
+                          </Button>
+                          <h3 className="projectTitle">Placeholder</h3>
+                        </div>
                       </Col>
                     </Row>
                   </Col>

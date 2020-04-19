@@ -59,6 +59,7 @@
 
     .description {
       margin-bottom: 30px;
+      font-weight: 400;
     }
 
     .input-group,
@@ -108,6 +109,7 @@
   h5.description {
     max-width: 700px;
     margin: 20px auto 75px;
+    font-weight: 400;
   }
 
   .nav-align-center {
@@ -136,11 +138,11 @@
     margin-top: -106px;
   }
 
-  .collections {
-    img {
-      margin-bottom: 30px;
-    }
-  }
+  // .collections {
+  //   img {
+  //     margin-bottom: 30px;
+  //   }
+  // }
 
   .gallery {
     margin-top: 45px;
