@@ -85,7 +85,7 @@ function Projects() {
                         2
                       </NavLink>
                     </NavItem>
-                    <NavItem>
+                    {/* <NavItem>
                       <NavLink
                         className={pills === "3" ? "active" : ""}
                         style={{
@@ -102,7 +102,7 @@ function Projects() {
                       >
                         3
                       </NavLink>
-                    </NavItem>
+                    </NavItem> */}
                   </Nav>
                 </div>
               </Col>
@@ -134,16 +134,20 @@ function Projects() {
                           <img
                             alt="..."
                             className="img-raised"
-                            src={require("assets/img/projects/learnlocker/1.png")}
+                            src={require("assets/img/projects/allegiance/1.png")}
                           ></img>
                           <Button
                             size="lg"
                             color="info"
                             className="projectButton"
+                            onClick={() => {
+                              setModalSmall(true);
+                              setSelectedProject("Allegiance");
+                            }}
                           >
                             Learn More
                           </Button>
-                          <h3 className="projectTitle">Placeholder</h3>
+                          <h3 className="projectTitle">Allegiance</h3>
                         </div>
                       </Col>
                       <Col md="6">
@@ -157,10 +161,146 @@ function Projects() {
                             size="lg"
                             color="info"
                             className="projectButton"
+                            onClick={() => {
+                              setModalSmall(true);
+                              setSelectedProject("SocialBee");
+                            }}
                           >
                             Learn More
                           </Button>
                           <h3 className="projectTitle">SocialBee</h3>
+                        </div>
+                        <div className="projectWrapper">
+                          <img
+                            alt="..."
+                            className="img-raised"
+                            src={require("assets/img/projects/socketiochatapp/1.png")}
+                          ></img>
+                          <Button
+                            size="lg"
+                            color="info"
+                            className="projectButton"
+                            onClick={() => {
+                              setModalSmall(true);
+                              setSelectedProject("Socket.io Chat App");
+                            }}
+                          >
+                            Learn More
+                          </Button>
+                          <h3 className="projectTitle">Socket.io Chat App</h3>
+                        </div>
+                      </Col>
+                    </Row>
+                  </Col>
+                </TabPane>
+                <TabPane tabId="pills2">
+                  <Col className="ml-auto mr-auto" md="10">
+                    <Row className="collections">
+                      <Col md="6">
+                        <div className="projectWrapper">
+                          <img
+                            alt="..."
+                            className="img-raised"
+                            src={require("assets/img/projects/apitreasurehunter/1.png")}
+                          ></img>
+                          <Button
+                            size="lg"
+                            color="info"
+                            className="projectButton"
+                            onClick={() => {
+                              setModalSmall(true);
+                              setSelectedProject("API Treasure Hunter");
+                            }}
+                          >
+                            Learn More
+                          </Button>
+                          <h3 className="projectTitle">API Treasure Hunter</h3>
+                        </div>
+                        <div className="projectWrapper">
+                          <img
+                            alt="..."
+                            className="img-raised"
+                            src={require("assets/img/projects/reacttimer/1.gif")}
+                          ></img>
+                          <Button
+                            size="lg"
+                            color="info"
+                            className="projectButton"
+                            onClick={() => {
+                              setModalSmall(true);
+                              setSelectedProject("React Timer");
+                            }}
+                          >
+                            Learn More
+                          </Button>
+                          <h3 className="projectTitle">React Timer</h3>
+                        </div>
+                      </Col>
+                      <Col md="6">
+                        <div className="projectWrapper">
+                          <img
+                            alt="..."
+                            className="img-raised"
+                            src={require("assets/img/projects/reactxylophone/1.gif")}
+                          ></img>
+                          <Button
+                            size="lg"
+                            color="info"
+                            className="projectButton"
+                            onClick={() => {
+                              setModalSmall(true);
+                              setSelectedProject("React Xylophone");
+                            }}
+                          >
+                            Learn More
+                          </Button>
+                          <h3 className="projectTitle">React Xylophone</h3>
+                        </div>
+                        {/* <div className="projectWrapper">
+                          <img
+                            alt="..."
+                            className="img-raised"
+                            src={require("assets/img/projects/learnlocker/3.png")}
+                          ></img>
+                          <Button
+                            size="lg"
+                            color="info"
+                            className="projectButton"
+                            onClick={() => {
+                              setModalSmall(true);
+                              setSelectedProject("Socket.io Chat App");
+                            }}
+                          >
+                            Learn More
+                          </Button>
+                          <h3 className="projectTitle">Socket.io Chat App</h3>
+                        </div> */}
+                      </Col>
+                    </Row>
+                  </Col>
+                </TabPane>
+                {/* <TabPane tabId="pills3">
+                  <Col className="ml-auto mr-auto" md="10">
+                    <Row className="collections">
+                      <Col md="6">
+                      <div className="projectWrapper">
+                          <img
+                            alt="..."
+                            className="img-raised"
+                            src={require("assets/img/projects/learnlocker/3.png")}
+                          ></img>
+                          <Button
+                            size="lg"
+                            color="info"
+                            className="projectButton"
+                            onClick={() => {
+                              setModalSmall(true);
+                              setSelectedProject("Socket.io Chat App");
+                            }}
+                          >
+                            Learn More
+                          </Button>
+                          <h3 className="projectTitle">Socket.io Chat App</h3>
                         </div>
                         <div className="projectWrapper">
                           <img
@@ -172,75 +312,59 @@ function Projects() {
                             size="lg"
                             color="info"
                             className="projectButton"
+                            onClick={() => {
+                              setModalSmall(true);
+                              setSelectedProject("Socket.io Chat App");
+                            }}
                           >
                             Learn More
                           </Button>
-                          <h3 className="projectTitle">Placeholder</h3>
+                          <h3 className="projectTitle">Socket.io Chat App</h3>
+                        </div>
+                      </Col>
+                      <Col md="6">
+                      <div className="projectWrapper">
+                          <img
+                            alt="..."
+                            className="img-raised"
+                            src={require("assets/img/projects/learnlocker/3.png")}
+                          ></img>
+                          <Button
+                            size="lg"
+                            color="info"
+                            className="projectButton"
+                            onClick={() => {
+                              setModalSmall(true);
+                              setSelectedProject("Socket.io Chat App");
+                            }}
+                          >
+                            Learn More
+                          </Button>
+                          <h3 className="projectTitle">Socket.io Chat App</h3>
+                        </div>
+                        <div className="projectWrapper">
+                          <img
+                            alt="..."
+                            className="img-raised"
+                            src={require("assets/img/projects/learnlocker/3.png")}
+                          ></img>
+                          <Button
+                            size="lg"
+                            color="info"
+                            className="projectButton"
+                            onClick={() => {
+                              setModalSmall(true);
+                              setSelectedProject("Socket.io Chat App");
+                            }}
+                          >
+                            Learn More
+                          </Button>
+                          <h3 className="projectTitle">Socket.io Chat App</h3>
                         </div>
                       </Col>
                     </Row>
                   </Col>
-                </TabPane>
-                <TabPane tabId="pills2">
-                  <Col className="ml-auto mr-auto" md="10">
-                    <Row className="collections">
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg6.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg11.jpg")}
-                        ></img>
-                      </Col>
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg7.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg8.jpg")}
-                        ></img>
-                      </Col>
-                    </Row>
-                  </Col>
-                </TabPane>
-                <TabPane tabId="pills3">
-                  <Col className="ml-auto mr-auto" md="10">
-                    <Row className="collections">
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg3.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg8.jpg")}
-                        ></img>
-                      </Col>
-                      <Col md="6">
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg7.jpg")}
-                        ></img>
-                        <img
-                          alt="..."
-                          className="img-raised"
-                          src={require("assets/img/bg6.jpg")}
-                        ></img>
-                      </Col>
-                    </Row>
-                  </Col>
-                </TabPane>
+                </TabPane> */}
               </TabContent>
             </Row>
           </Container>
