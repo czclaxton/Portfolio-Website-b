@@ -1,6 +1,7 @@
 img {
   max-width: 100%;
   border-radius: 1px;
+  filter: brightness(95%);
 }
 .img-raised {
   box-shadow: $box-shadow-raised;
@@ -30,13 +31,13 @@ img {
   text-align: center;
   margin: 0;
   text-transform: uppercase;
-  padding: 5px;
+  padding: 3px;
 }
 .projectButton {
   position: absolute;
   background: #0095fe;
-  font-size: 1.25rem;
-  font-weight: 550;
+  font-size: 1.2rem;
+  text-transform: uppercase;
   margin: auto;
   top: 0;
   left: 0;
@@ -49,4 +50,14 @@ img {
   opacity: 1;
   transform: translateY(225%);
   transition: opacity 0.3s, transform 0.3s ease 0s;
+}
+.modalButton {
+  font-weight: 400;
+  background: #fff;
+  color: #0095fe;
+  font-size: 14px;
+  &:hover {
+    background: #0095fe;
+    filter: brightness(90%);
+  }
 }

@@ -11,12 +11,17 @@ import {
   Row,
   Col,
   Button,
+  Modal,
+  ModalBody,
 } from "reactstrap";
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import ProjectModal from "./ProjectModal";
 
 function Projects() {
+  const [modalSmall, setModalSmall] = React.useState(false);
+  const [selectedProject, setSelectedProject] = React.useState(null);
   const [pills, setPills] = React.useState("1");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -116,6 +121,10 @@ function Projects() {
                             size="lg"
                             color="info"
                             className="projectButton"
+                            onClick={() => {
+                              setModalSmall(true);
+                              setSelectedProject("Learn Locker");
+                            }}
                           >
                             Learn More
                           </Button>
@@ -237,6 +246,11 @@ function Projects() {
           </Container>
         </div>
       </div>
+      <ProjectModal
+        modalSmall={modalSmall}
+        setModalSmall={setModalSmall}
+        selectedProject={selectedProject}
+      />
     </>
   );
 }

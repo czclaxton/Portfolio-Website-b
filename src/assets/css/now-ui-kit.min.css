@@ -4510,9 +4510,9 @@ img {
 .modal.modal-mini .modal-footer button {
   text-transform: uppercase;
 }
-.modal.modal-mini .modal-footer button:first-child {
+/* .modal.modal-mini .modal-footer button:first-child {
   opacity: 0.5;
-}
+} */
 .modal.modal-default .modal-content {
   background-color: #fff;
   color: #2c2c2c;
