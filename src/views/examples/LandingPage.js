@@ -1,5 +1,8 @@
 import React from "react";
 
+// Components
+import Projects from "./Projects";
+
 // reactstrap components
 import {
   Button,
@@ -107,6 +110,7 @@ function LandingPage() {
             </div>
           </Container>
         </div>
+        <Projects />
         <div className="section section-contact-us text-center">
           <Container>
             <h2 className="title">Want to work with me?</h2>

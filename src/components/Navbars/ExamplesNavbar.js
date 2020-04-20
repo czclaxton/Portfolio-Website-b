@@ -19,6 +19,9 @@ function ExamplesNavbar(props) {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
 
+  let Scroll = require("react-scroll");
+  let scroller = Scroll.scroller;
+
   const match = matchPath("/profile-page", {
     path: props.location.pathname,
     exact: true,
@@ -74,11 +77,47 @@ function ExamplesNavbar(props) {
               <span className="button-bar"></span>
             </DropdownToggle>
             <DropdownMenu aria-labelledby="navbarDropdown">
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                Home
+              <DropdownItem href="#pablo">
+                <NavLink
+                  href="#"
+                  style={{ color: "black", padding: 0 }}
+                  onClick={() => {
+                    console.log("collapseOpen", collapseOpen);
+                    scroller.scrollTo("scrollToProjects", {
+                      duration: 3000,
+                      delay: 0,
+                      smooth: "easeInOutQuart",
+                    });
+                  }}
+                >
+                  Projects
+                </NavLink>
               </DropdownItem>
-              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                Projects
+              <DropdownItem href="#pablo">
+                <NavLink
+                  style={{ color: "black", padding: 0 }}
+                  href="https://drive.google.com/uc?export=download&id=1rqoT8BydMdC78XfOn7WaMiW1qsG5TW2L"
+                >
+                  Resume
+                </NavLink>
+              </DropdownItem>
+              <DropdownItem href="#pablo">
+                <NavLink
+                  style={{ color: "black", padding: 0 }}
+                  href="https://www.linkedin.com/in/czclaxton/"
+                  target="_blank"
+                >
+                  LinkedIn
+                </NavLink>
+              </DropdownItem>
+              <DropdownItem href="#pablo">
+                <NavLink
+                  style={{ color: "black", padding: 0 }}
+                  href="https://github.com/czclaxton"
+                  target="_blank"
+                >
+                  Github
+                </NavLink>
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
@@ -104,12 +143,27 @@ function ExamplesNavbar(props) {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink href="http://localhost:3000/profile-page">
+                <NavLink
+                  href="#"
+                  onClick={() => {
+                    document.documentElement.classList.toggle("nav-open");
+                    scroller.scrollTo("scrollToProjects", {
+                      duration: 3000,
+                      delay: 0,
+                      smooth: "easeInOutQuart",
+                    });
+                  }}
+                >
                   Projects
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://drive.google.com/uc?export=download&id=1rqoT8BydMdC78XfOn7WaMiW1qsG5TW2L">
+                <NavLink
+                  href="https://drive.google.com/uc?export=download&id=1rqoT8BydMdC78XfOn7WaMiW1qsG5TW2L"
+                  onClick={() =>
+                    document.documentElement.classList.toggle("nav-open")
+                  }
+                >
                   Resume
                 </NavLink>
               </NavItem>
@@ -117,13 +171,22 @@ function ExamplesNavbar(props) {
                 <NavLink
                   href="https://www.linkedin.com/in/czclaxton/"
                   target="_blank"
+                  onClick={() =>
+                    document.documentElement.classList.toggle("nav-open")
+                  }
                 >
                   <i className="fab fa-linkedin"></i>
                   <p className="d-lg-none d-xl-none">LinkedIn</p>
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/czclaxton" target="_blank">
+                <NavLink
+                  href="https://github.com/czclaxton"
+                  target="_blank"
+                  onClick={() =>
+                    document.documentElement.classList.toggle("nav-open")
+                  }
+                >
                   <i className="fab fa-github"></i>
                   <p className="d-lg-none d-xl-none">Github</p>
                 </NavLink>
