@@ -11,12 +11,9 @@ import {
   Row,
   Col,
   Button,
-  Modal,
-  ModalBody,
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import ProjectModal from "./ProjectModal";
 
 function Projects() {
@@ -35,7 +32,7 @@ function Projects() {
 
   return (
     <>
-      <ExamplesNavbar />
+      {/* <ExamplesNavbar /> */}
       <div className="wrapper">
         {/* <ProjectsHeader /> */}
         <div className="section">

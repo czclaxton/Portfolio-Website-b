@@ -30,12 +30,22 @@ function LandingPageHeader() {
           className="page-header-image"
           style={{
             backgroundImage: "url(" + require("assets/img/bg2.jpg") + ")",
+            filter: "brightness(0.8)",
           }}
           ref={pageHeader}
         ></div>
         <div className="content-center">
           <Container>
-            <h1 className="title">Hello, I'm Connor Claxton.</h1>
+            <h1
+              className="title"
+              style={{
+                fontWeight: "500",
+                lineHeight: "1.5",
+                fontSize: "2.5em",
+              }}
+            >
+              Hello, I'm Connor Claxton.
+            </h1>
             <div className="text-center">
               <Button
                 className="btn-icon"
