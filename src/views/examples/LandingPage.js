@@ -93,17 +93,17 @@ function LandingPage() {
                     websites, and studied basic design fundamentals.
                   </p>
                   <p>
-                    Once I had began my college career I decided to take a
-                    different career route to experience other things, but
-                    nothing truly piqued my interest and gave me that intrinsic
-                    drive to improve and challenge myself until I decided to
-                    revisit web development.
+                    Once my college career began I decided to explore different
+                    career paths to experience other available choices, but
+                    nothing truly piqued my interest and gave me that drive to
+                    improve my knowledge and intrinsically enjoy learning more
+                    until I decided to revisit web development.
                   </p>
                   <p>
                     Seeing how much the complexity of web development has
-                    progressed and also finally building out dynamic web apps
-                    has really brought the challenge and passion I wanted to
-                    have for a career path.
+                    progressed, and experiencing the challenge that constructing
+                    dynamic web apps provides has really brought the drive and
+                    passion I have wanted in a career.
                   </p>
                 </Col>
               </Row>
