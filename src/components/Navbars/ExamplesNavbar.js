@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { matchPath } from "react-router";
+import { withRouter } from "react-router";
 // reactstrap components
 import {
   Collapse,
@@ -7,19 +8,30 @@ import {
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
-  NavbarBrand,
   Navbar,
   NavItem,
   NavLink,
   Nav,
   Container,
-  UncontrolledTooltip
 } from "reactstrap";
 
-function ExamplesNavbar() {
+function ExamplesNavbar(props) {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+
+  let Scroll = require("react-scroll");
+  let scroller = Scroll.scroller;
+
+  const match = matchPath("/profile-page", {
+    path: props.location.pathname,
+    exact: true,
+    strict: false,
+  });
+
   React.useEffect(() => {
+    if (match && document.documentElement.scrollTop >= 0) {
+      setNavbarColor("");
+    }
     const updateNavbarColor = () => {
       if (
         document.documentElement.scrollTop > 399 ||
@@ -58,46 +70,58 @@ function ExamplesNavbar() {
               href="#pablo"
               id="navbarDropdown"
               tag="a"
-              onClick={e => e.preventDefault()}
+              onClick={(e) => e.preventDefault()}
             >
               <span className="button-bar"></span>
               <span className="button-bar"></span>
               <span className="button-bar"></span>
             </DropdownToggle>
             <DropdownMenu aria-labelledby="navbarDropdown">
-              <DropdownItem header tag="a">
-                Dropdown header
+              <DropdownItem href="#pablo">
+                <NavLink
+                  href="#"
+                  style={{ color: "black", padding: 0 }}
+                  onClick={() => {
+                    console.log("collapseOpen", collapseOpen);
+                    scroller.scrollTo("scrollToProjects", {
+                      duration: 3000,
+                      delay: 0,
+                      smooth: "easeInOutQuart",
+                    });
+                  }}
+                >
+                  Projects
+                </NavLink>
               </DropdownItem>
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-                Action
+              <DropdownItem href="#pablo">
+                <NavLink
+                  style={{ color: "black", padding: 0 }}
+                  href="https://drive.google.com/uc?export=download&id=1rqoT8BydMdC78XfOn7WaMiW1qsG5TW2L"
+                >
+                  Resume
+                </NavLink>
               </DropdownItem>
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-                Another action
+              <DropdownItem href="#pablo">
+                <NavLink
+                  style={{ color: "black", padding: 0 }}
+                  href="https://www.linkedin.com/in/czclaxton/"
+                  target="_blank"
+                >
+                  LinkedIn
+                </NavLink>
               </DropdownItem>
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-                Something else here
-              </DropdownItem>
-              <DropdownItem divider></DropdownItem>
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-                Separated link
-              </DropdownItem>
-              <DropdownItem divider></DropdownItem>
-              <DropdownItem href="#pablo" onClick={e => e.preventDefault()}>
-                One more separated link
+              <DropdownItem href="#pablo">
+                <NavLink
+                  style={{ color: "black", padding: 0 }}
+                  href="https://github.com/czclaxton"
+                  target="_blank"
+                >
+                  Github
+                </NavLink>
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
           <div className="navbar-translate">
-            <NavbarBrand
-              href="https://demos.creative-tim.com/now-ui-kit-react/index?ref=nukr-examples-navbar"
-              target="_blank"
-              id="navbar-brand"
-            >
-              Now Ui Kit
-            </NavbarBrand>
-            <UncontrolledTooltip target="#navbar-brand">
-              Designed by Invision. Coded by Creative Tim
-            </UncontrolledTooltip>
             <button
               className="navbar-toggler navbar-toggler"
               onClick={() => {
@@ -119,53 +143,53 @@ function ExamplesNavbar() {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink to="/index" tag={Link}>
-                  Back to Kit
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/creativetimofficial/now-ui-kit-react/issues?ref=creativetim">
-                  Have an issue?
+                <NavLink
+                  href="#"
+                  onClick={() => {
+                    document.documentElement.classList.toggle("nav-open");
+                    scroller.scrollTo("scrollToProjects", {
+                      duration: 3000,
+                      delay: 0,
+                      smooth: "easeInOutQuart",
+                    });
+                  }}
+                >
+                  Projects
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://twitter.com/CreativeTim?ref=creativetim"
-                  target="_blank"
-                  id="twitter-tooltip"
+                  href="https://drive.google.com/uc?export=download&id=1rqoT8BydMdC78XfOn7WaMiW1qsG5TW2L"
+                  onClick={() =>
+                    document.documentElement.classList.toggle("nav-open")
+                  }
                 >
-                  <i className="fab fa-twitter"></i>
-                  <p className="d-lg-none d-xl-none">Twitter</p>
+                  Resume
                 </NavLink>
-                <UncontrolledTooltip target="#twitter-tooltip">
-                  Follow us on Twitter
-                </UncontrolledTooltip>
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                  href="https://www.linkedin.com/in/czclaxton/"
                   target="_blank"
-                  id="facebook-tooltip"
+                  onClick={() =>
+                    document.documentElement.classList.toggle("nav-open")
+                  }
                 >
-                  <i className="fab fa-facebook-square"></i>
-                  <p className="d-lg-none d-xl-none">Facebook</p>
+                  <i className="fab fa-linkedin"></i>
+                  <p className="d-lg-none d-xl-none">LinkedIn</p>
                 </NavLink>
-                <UncontrolledTooltip target="#facebook-tooltip">
-                  Like us on Facebook
-                </UncontrolledTooltip>
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                  href="https://github.com/czclaxton"
                   target="_blank"
-                  id="instagram-tooltip"
+                  onClick={() =>
+                    document.documentElement.classList.toggle("nav-open")
+                  }
                 >
-                  <i className="fab fa-instagram"></i>
-                  <p className="d-lg-none d-xl-none">Instagram</p>
+                  <i className="fab fa-github"></i>
+                  <p className="d-lg-none d-xl-none">Github</p>
                 </NavLink>
-                <UncontrolledTooltip target="#instagram-tooltip">
-                  Follow us on Instagram
-                </UncontrolledTooltip>
               </NavItem>
             </Nav>
           </Collapse>
@@ -175,4 +199,4 @@ function ExamplesNavbar() {
   );
 }
 
-export default ExamplesNavbar;
+export default withRouter(ExamplesNavbar);
