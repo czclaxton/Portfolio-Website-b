@@ -83,6 +83,15 @@ function ExamplesNavbar(props) {
               <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
                 Projects
               </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Resume
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                LinkedIn
+              </DropdownItem>
+              <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                Github
+              </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
           <div className="navbar-translate">
