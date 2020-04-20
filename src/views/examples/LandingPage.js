@@ -44,9 +44,9 @@ function LandingPage() {
                 <h5 className="description">
                   I am a developer who is constantly motivated to learn about
                   the latest technologies for both the frontend or backend. I
-                  enjoy working in fast paced environments. With a very diverse
-                  educational background and cultural experiences I work
-                  exceptionally well within a team environment.
+                  enjoy working in fast-paced environments. With my diverse
+                  educational background and cultural experience I work
+                  exceptionally well within any team environment.
                 </h5>
               </Col>
             </Row>
