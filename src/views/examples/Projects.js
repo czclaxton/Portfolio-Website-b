@@ -217,7 +217,7 @@ function Projects() {
                           <img
                             alt="..."
                             className="img-raised"
-                            src={require("assets/img/projects/reacttimer/1.gif")}
+                            src={require("assets/img/projects/reacttimer/1.png")}
                           ></img>
                           <Button
                             size="lg"
@@ -238,7 +238,7 @@ function Projects() {
                           <img
                             alt="..."
                             className="img-raised"
-                            src={require("assets/img/projects/reactxylophone/1.gif")}
+                            src={require("assets/img/projects/reactxylophone/1.png")}
                           ></img>
                           <Button
                             size="lg"
