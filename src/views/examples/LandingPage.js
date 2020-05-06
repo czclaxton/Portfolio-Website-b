@@ -1,5 +1,8 @@
 import React from "react";
 
+// Images
+import imageUrl from "../../assets/img/bg2.jpg";
+
 // Components
 import Projects from "./Projects";
 
@@ -22,6 +25,7 @@ import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 function LandingPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
+
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");
@@ -31,11 +35,13 @@ function LandingPage() {
       document.body.classList.remove("sidebar-collapse");
     };
   });
+
   return (
     <>
       <ExamplesNavbar />
       <div className="wrapper">
-        <LandingPageHeader />
+        <LandingPageHeader imageUrl={imageUrl} />
+
         <div className="section section-about-us">
           <Container>
             <Row>
