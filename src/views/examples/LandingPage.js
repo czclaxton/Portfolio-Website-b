@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 // Components
 import Projects from "./Projects";
@@ -17,11 +17,15 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import LandingPageHeader from "components/Headers/LandingPageHeader.js";
+const LandingPageHeader = React.lazy(() =>
+  import("components/Headers/LandingPageHeader.js")
+);
+// import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 
 function LandingPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
+
   React.useEffect(() => {
     document.body.classList.add("landing-page");
     document.body.classList.add("sidebar-collapse");
@@ -31,11 +35,17 @@ function LandingPage() {
       document.body.classList.remove("sidebar-collapse");
     };
   });
+
+  const imageUrl = "assets/img/bg2.jpg";
+  const lazyUrl = "assets/img/bg2-lazy.jpg";
+
   return (
     <>
       <ExamplesNavbar />
       <div className="wrapper">
-        <LandingPageHeader />
+        <Suspense fallback={<LandingPageHeader imageUrl={lazyUrl} />}>
+          <LandingPageHeader imageUrl={imageUrl} />
+        </Suspense>
         <div className="section section-about-us">
           <Container>
             <Row>
