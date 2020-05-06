@@ -1,5 +1,9 @@
 import React, { Suspense } from "react";
 
+// Images
+import imageUrl from "../../assets/img/bg2.jpg";
+import lazyUrl from "../../assets/img/bg2-lazy.jpg";
+
 // Components
 import Projects from "./Projects";
 
@@ -17,10 +21,10 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-const LandingPageHeader = React.lazy(() =>
-  import("components/Headers/LandingPageHeader.js")
-);
-// import LandingPageHeader from "components/Headers/LandingPageHeader.js";
+// const LandingPageHeader = React.lazy(() =>
+//   import("components/Headers/LandingPageHeader.js")
+// );
+import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 
 function LandingPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -36,8 +40,8 @@ function LandingPage() {
     };
   });
 
-  const imageUrl = "assets/img/bg2.jpg";
-  const lazyUrl = "assets/img/bg2-lazy.jpg";
+  // const imageUrl = "assets/img/bg2.jpg";
+  // const lazyUrl = "assets/img/bg2-lazy.jpg";
 
   return (
     <>
