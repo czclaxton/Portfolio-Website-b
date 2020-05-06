@@ -1,10 +1,11 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 
 // reactstrap components
 import { Button, Container } from "reactstrap";
 
-function LandingPageHeader() {
+function LandingPageHeader(props) {
+  const { imageUrl } = props;
+
   let pageHeader = React.createRef();
   let Scroll = require("react-scroll");
   let scroller = Scroll.scroller;
@@ -29,7 +30,7 @@ function LandingPageHeader() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/bg2.jpg") + ")",
+            backgroundImage: `url(${imageUrl})`,
             filter: "brightness(0.8)",
           }}
           ref={pageHeader}
