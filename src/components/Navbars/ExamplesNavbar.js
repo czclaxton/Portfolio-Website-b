@@ -96,7 +96,7 @@ function ExamplesNavbar(props) {
               <DropdownItem href="#pablo">
                 <NavLink
                   style={{ color: "black", padding: 0 }}
-                  href="https://drive.google.com/uc?export=download&id=1rqoT8BydMdC78XfOn7WaMiW1qsG5TW2L"
+                  href="https://drive.google.com/uc?export=download&id=1f-v4qod5j2j-slkN5YVvdrBSe7rvrZm5"
                 >
                   Resume
                 </NavLink>
