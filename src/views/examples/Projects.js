@@ -112,7 +112,7 @@ function Projects() {
                           <img
                             alt="..."
                             className="img-raised"
-                            src={require("assets/img/projects/learnlocker/2.png")}
+                            src={require("assets/img/projects/reacttetris/1.png")}
                           ></img>
                           <Button
                             size="lg"
@@ -120,12 +120,12 @@ function Projects() {
                             className="projectButton"
                             onClick={() => {
                               setModalSmall(true);
-                              setSelectedProject("Learn Locker");
+                              setSelectedProject("React Tetris");
                             }}
                           >
                             Learn More
                           </Button>
-                          <h3 className="projectTitle">Learn Locker</h3>
+                          <h3 className="projectTitle">React Tetris</h3>
                         </div>
                         <div className="projectWrapper">
                           <img
@@ -152,6 +152,25 @@ function Projects() {
                           <img
                             alt="..."
                             className="img-raised"
+                            src={require("assets/img/projects/learnlocker/2.png")}
+                          ></img>
+                          <Button
+                            size="lg"
+                            color="info"
+                            className="projectButton"
+                            onClick={() => {
+                              setModalSmall(true);
+                              setSelectedProject("Learn Locker");
+                            }}
+                          >
+                            Learn More
+                          </Button>
+                          <h3 className="projectTitle">Learn Locker</h3>
+                        </div>
+                        <div className="projectWrapper">
+                          <img
+                            alt="..."
+                            className="img-raised"
                             src={require("assets/img/projects/socialbee/1.png")}
                           ></img>
                           <Button
@@ -167,6 +186,14 @@ function Projects() {
                           </Button>
                           <h3 className="projectTitle">SocialBee</h3>
                         </div>
+                      </Col>
+                    </Row>
+                  </Col>
+                </TabPane>
+                <TabPane tabId="pills2">
+                  <Col className="ml-auto mr-auto" md="10">
+                    <Row className="collections">
+                      <Col md="6">
                         <div className="projectWrapper">
                           <img
                             alt="..."
@@ -185,33 +212,6 @@ function Projects() {
                             Learn More
                           </Button>
                           <h3 className="projectTitle">Socket.io Chat App</h3>
-                        </div>
-                      </Col>
-                    </Row>
-                  </Col>
-                </TabPane>
-                <TabPane tabId="pills2">
-                  <Col className="ml-auto mr-auto" md="10">
-                    <Row className="collections">
-                      <Col md="6">
-                        <div className="projectWrapper">
-                          <img
-                            alt="..."
-                            className="img-raised"
-                            src={require("assets/img/projects/apitreasurehunter/1.png")}
-                          ></img>
-                          <Button
-                            size="lg"
-                            color="info"
-                            className="projectButton"
-                            onClick={() => {
-                              setModalSmall(true);
-                              setSelectedProject("API Treasure Hunter");
-                            }}
-                          >
-                            Learn More
-                          </Button>
-                          <h3 className="projectTitle">API Treasure Hunter</h3>
                         </div>
                         <div className="projectWrapper">
                           <img
@@ -253,11 +253,11 @@ function Projects() {
                           </Button>
                           <h3 className="projectTitle">React Xylophone</h3>
                         </div>
-                        {/* <div className="projectWrapper">
+                        <div className="projectWrapper">
                           <img
                             alt="..."
                             className="img-raised"
-                            src={require("assets/img/projects/learnlocker/3.png")}
+                            src={require("assets/img/projects/apitreasurehunter/1.png")}
                           ></img>
                           <Button
                             size="lg"
@@ -265,13 +265,13 @@ function Projects() {
                             className="projectButton"
                             onClick={() => {
                               setModalSmall(true);
-                              setSelectedProject("Socket.io Chat App");
+                              setSelectedProject("API Treasure Hunter");
                             }}
                           >
                             Learn More
                           </Button>
-                          <h3 className="projectTitle">Socket.io Chat App</h3>
-                        </div> */}
+                          <h3 className="projectTitle">API Treasure Hunter</h3>
+                        </div>
                       </Col>
                     </Row>
                   </Col>
