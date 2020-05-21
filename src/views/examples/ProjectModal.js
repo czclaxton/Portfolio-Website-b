@@ -4,6 +4,11 @@ import React from "react";
 import { Button, Modal, ModalBody } from "reactstrap";
 
 const storage = {
+  "React Tetris": {
+    github: "https://github.com/czclaxton/react-tetris",
+    site: "https://tetris.connorclaxton.dev/",
+    description: "Tetris built using react hooks.",
+  },
   "Learn Locker": {
     github: "https://github.com/learneda",
     site: "https://learnlocker.dev/",

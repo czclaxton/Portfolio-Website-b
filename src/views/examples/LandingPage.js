@@ -117,7 +117,7 @@ function LandingPage() {
           </Container>
         </div>
         <Projects />
-        <div className="section section-contact-us text-center">
+        {/* <div className="section section-contact-us text-center">
           <Container>
             <h2 className="title">Want to work with me?</h2>
             <p className="description">Your project is very important.</p>
@@ -181,7 +181,7 @@ function LandingPage() {
               </Col>
             </Row>
           </Container>
-        </div>
+        </div> */}
         {/* <TransparentFooter /> */}
       </div>
     </>
