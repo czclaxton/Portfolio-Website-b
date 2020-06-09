@@ -159,7 +159,7 @@ function ExamplesNavbar(props) {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://drive.google.com/uc?export=download&id=1rqoT8BydMdC78XfOn7WaMiW1qsG5TW2L"
+                  href="https://drive.google.com/uc?export=download&id=1f-v4qod5j2j-slkN5YVvdrBSe7rvrZm5"
                   onClick={() =>
                     document.documentElement.classList.toggle("nav-open")
                   }
