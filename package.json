@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "moment": "2.24.0",
-    "node-sass": "4.12.0",
     "nouislider": "14.0.2",
     "react": "16.8.6",
     "react-bootstrap-switch": "15.5.3",
@@ -14,7 +13,9 @@
     "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",
     "react-scroll": "^1.7.16",
-    "reactstrap": "8.0.1"
+    "reactstrap": "8.0.1",
+    "sass": "^1.49.0",
+    "sass-loader": "^12.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
