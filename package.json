@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/runtime": "^7.16.7",
-    "moment": "2.24.0",
+    "moment": "2.29.2",
     "nouislider": "14.0.2",
     "react": "16.8.6",
     "react-bootstrap-switch": "15.5.3",
